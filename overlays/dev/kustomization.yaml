@@ -6,7 +6,7 @@ resources:
 images:
 - name: nginx
   newName: ghcr.io/thinking-always/frontend
-  newTag: bac6cb8cda58198ebb75c13a67a8daa232880d7d
+  newTag: 4aedc183dc432784197c0edaad514480819070c3
 replicas:
 - count: 1
   name: frontend
