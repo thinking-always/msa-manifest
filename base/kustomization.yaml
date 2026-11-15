@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - frontend.yaml
   - api.yaml
+  - api-v2.yaml
   - backend.yaml
   - gateway.yaml
   - destinationrule.yaml
