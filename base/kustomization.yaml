@@ -4,4 +4,4 @@ resources:
   - frontend.yaml
   - api.yaml
   - backend.yaml
-  - ingress.yaml
+  - gateway.yaml
