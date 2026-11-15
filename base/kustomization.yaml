@@ -5,3 +5,4 @@ resources:
   - api.yaml
   - backend.yaml
   - gateway.yaml
+  - destinationrule.yaml

@@ -29,18 +29,28 @@ spec:
       route:
         - destination:
             host: api
+            subset: v1
             port:
               number: 5678
-    - match:
-        - uri:
-            prefix: /backend
-      route:
+          weight: 90
         - destination:
-            host: backend
+            host: api
+            subset: v2
             port:
               number: 5678
-    - route:
-        - destination:
-            host: frontend
-            port:
-              number: 80
+          weight: 10
+    
+    
+    # - match:
+    #     - uri:
+    #         prefix: /backend
+    #   route:
+    #     - destination:
+    #         host: backend
+    #         port:
+    #           number: 5678
+    # - route:
+    #     - destination:
+    #         host: frontend
+    #         port:
+    #           number: 80
