@@ -39,18 +39,16 @@ spec:
             port:
               number: 5678
           weight: 10
-    
-    
-    # - match:
-    #     - uri:
-    #         prefix: /backend
-    #   route:
-    #     - destination:
-    #         host: backend
-    #         port:
-    #           number: 5678
-    # - route:
-    #     - destination:
-    #         host: frontend
-    #         port:
-    #           number: 80
+    - match:
+        - uri:
+            prefix: /backend
+      route:
+        - destination:
+            host: backend
+            port:
+              number: 5678
+    - route:
+        - destination:
+            host: frontend
+            port:
+              number: 80
