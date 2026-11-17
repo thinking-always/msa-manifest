@@ -7,6 +7,9 @@ images:
 - name: nginx
   newName: ghcr.io/thinking-always/frontend
   newTag: 4aedc183dc432784197c0edaad514480819070c3
+- name: payment
+  newName: ghcr.io/thinking-always/payment
+  newTag: d193b39007b2a21c7675c3b57c0058d91f9023ba
 - name: product
   newName: ghcr.io/thinking-always/product
   newTag: 7826f59a073c2b373fd4838f819237bcf37bc8e4
