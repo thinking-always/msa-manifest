@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  labels: {app: payment, version: v1}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: payment, version: v1}
+  template:
+    metadata:
+      labels: {app: payment, version: v1}
+    spec:
+      containers:
+        - name: payment
+          image: payment
+          ports:
+            - containerPort: 8080
+          env:
+            - name: FAIL_RATE
+              value: "0"
+            - name: DELAY_MS
+              value: "0"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment
+  labels: {app: payment}
+spec:
+  selector: {app: payment}
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080

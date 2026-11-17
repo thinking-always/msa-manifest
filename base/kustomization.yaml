@@ -5,3 +5,4 @@ resources:
   - product.yaml
   - gateway.yaml
   - destinationrule.yaml
+  - payment.yaml
