@@ -32,6 +32,14 @@ spec:
             subset: v1
             port:
               number: 80
+    - match:
+        - uri:
+            prefix: /api/orders
+      route:
+        - destination:
+            host: order
+            port:
+              number: 80
     - route:
         - destination:
             host: frontend

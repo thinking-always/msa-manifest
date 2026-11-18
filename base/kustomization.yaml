@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - frontend.yaml
   - product.yaml
+  - payment.yaml
+  - order.yaml
   - gateway.yaml
   - destinationrule.yaml
-  - payment.yaml
